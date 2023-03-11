@@ -1,15 +1,10 @@
-html {
+body {
   font-family: 'Roboto', sans-serif;
 }
 
-body {
-  display: flex;
-}
-
 .container {
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 5%;
+  max-width: 600px;
+  margin: 5% auto;
 }
 
 .header {
@@ -18,12 +13,38 @@ body {
   margin-bottom: 5%;
 }
 
-.accordion__header {
+.accordion {
+  cursor: pointer;
+  color: blue;
+  transition: .3s;
+}
+.accordion:hover {
+  color: black;
+}
+
+.accordion__item {
+  border-top: 1px solid grey;
+}
+
+.accordion__title {
+  display: block;
   font-size: 20px;
-  padding: 2% 0;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5% 0;
+}
+
+.checkbox {
+  width: 0; 
+  height: 0;
+  appearance: none;
+  position: absolute;
+}
+
+.checkbox:checked ~ .accordion__img {
+  display: block;
 }
 
 .accordion__img {
-  max-width: 90%;
-  text-align: center;
+  display: none;
 }
